@@ -7,7 +7,7 @@ class ClientesController < ApplicationController
     page = params[:pagina].to_i || 1
     page = 1 if page < 1
 
-    quantidade_por_pagina = 4
+    quantidade_por_pagina = 5
 
     offset = (page-1) * quantidade_por_pagina
 

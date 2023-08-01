@@ -14,21 +14,26 @@
     </noscript>
   </head>
   <body>
-    <!-- Page Wrapper -->
     <div id="page-wrapper">
-    <!-- Wrapper -->
       <div id="wrapper">
+        <% if notice.present? %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+
+        <% if flash[:error].present? %>
+          <p class="error"><%= flash[:error] %></p>
+        <% end %>
+
         <%= yield %>
       </div>
     </div>
-    <!-- Copyright -->
+
     <div class="copyright" style="color: #000;min-width: 500px;padding: 30px;">
       &copy; Untitled. Design: <br> 
       &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://html5up.net">HTML5 UP</a>.<br><br>
       &copy; Essencial software. Rails avançado: <br>
       &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/daniel-candido-8b8724bb/">Acessar</a>.
     </div>
-    <!-- Scripts -->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/browser.min.js"></script>
     <script src="/assets/js/breakpoints.min.js"></script>

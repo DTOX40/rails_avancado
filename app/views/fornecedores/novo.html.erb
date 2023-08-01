@@ -1,0 +1,28 @@
+<section class="panel banner right">
+  <div class="content color0">
+    <a href="/">Voltar para Home</a><br>
+    <h1>Novo Fornecedor</h1>
+
+    <a href="<%= fornecedores_path%>">Lista de Fornecedores</a>
+    <form action="<%= fornecedores_cadastrar_path %>" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="fornecedor[nome]" required>
+      
+      <label for="razao_social">Razão Social:</label>
+      <input type="text" id="razao_social" name="fornecedor[razao_social]" required>
+    
+      <label for="cnpj">CNPJ:</label>
+      <input type="text" id="cnpj" name="fornecedor[cnpj]" required>
+      
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="fornecedor[endereco]" required>
+      <br>
+      <input type="submit" value="Cadastrar">
+    </form>
+
+  </div>
+
+  <div class="image filtered span-1-75" data-position="25% 25%">
+    <img src="/images/pic01.jpg" alt="" />
+  </div>
+</section>
